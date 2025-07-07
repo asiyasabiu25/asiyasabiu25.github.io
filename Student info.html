@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Student Information Page</title>
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      text-align: center;
+      padding: 20px;
+      background-color: #f4f4f4;
+      color: #333;
+      transition: background-color 0.5s, color 0.5s;
+    }
+    .card {
+      background: white;
+      padding: 20px;
+      border-radius: 15px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      display: inline-block;
+      max-width: 350px;
+    }
+    img {
+      width: 120px;
+      border-radius: 50%;
+      margin: 15px 0;
+    }
+    table {
+      margin: 15px auto;
+      border-collapse: collapse;
+    }
+    td {
+      border: 1px solid #ccc;
+      padding: 8px 12px;
+    }
+    button {
+      padding: 10px 20px;
+      margin: 10px;
+      border: none;
+      background-color: #2ecc71;
+      color: white;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    #subjects {
+      display: none;
+      text-align: left;
+      margin-top: 15px;
+    }
+    a {
+      display: block;
+      margin-top: 25px;
+      color: #2ecc71;
+    }
+    .internship-note {
+      background-color: #e8f8f5;
+      color: #117864;
+      padding: 10px;
+      border-radius: 8px;
+      margin-top: 15px;
+      font-size: 14px;
+    }
+    ul.resources {
+      text-align: left;
+      margin: 15px 0;
+      padding-left: 20px;
+    }
+    ul.resources li {
+      margin: 5px 0;
+    }
+    ul.resources a {
+      color: #3498db;
+      text-decoration: none;
+    }
+    ul.resources a:hover {
+      text-decoration: underline;
+    }
+    /* Dark mode styles */
+    .dark-mode {
+      background-color: #1e1e1e;
+      color: #eee;
+    }
+    .dark-mode .card {
+      background-color: #333;
+      color: #eee;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+    }
+    .dark-mode a {
+      color: #58d68d;
+    }
+    .dark-mode .internship-note {
+      background-color: #2e4053;
+      color: #d5f5e3;
+    }
+    .dark-mode ul.resources a {
+      color: #85c1e9;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="card">
+    <h2>Student Profile</h2>
+    <img src="asiya.jpg" alt="Student photo">
+    <table>
+      <tr><td>Name</td><td>Asiya Sabiu Sulaiman</td></tr>
+      <tr><td>ID</td><td>ST-001</td></tr>
+      <tr><td>Class</td><td>Frontend Dev</td></tr>
+      <tr><td>Age</td><td>25</td></tr>
+    </table>
+
+    <div class="internship-note">
+      📌 Currently applying for an internship at <strong>FlexiSAF Edusoft</strong>. Passionate about using technology to empower education!
+    </div>
+
+    <button onclick="showSubjects()">Show Subjects</button>
+    <button onclick="motivate()">Inspire Me</button>
+    <button onclick="toggleDarkMode()">Toggle Dark Mode</button>
+
+    <div id="subjects">
+      <h4>Subjects</h4>
+      <ul>
+        <li>HTML Basics</li>
+        <li>CSS Styling</li>
+        <li>JavaScript Essentials</li>
+      </ul>
+    </div>
+
+    <h4>My Learning Resources</h4>
+    <ul class="resources">
+      <li><a href="https://www.theodinproject.com/" target="_blank">The Odin Project (Full Web Dev Path)</a></li>
+      <li><a href="https://www.freecodecamp.org/learn/responsive-web-design/" target="_blank">freeCodeCamp: Responsive Web Design</a></li>
+      <li><a href="https://developer.mozilla.org/en-US/docs/Web/HTML" target="_blank">MDN Web Docs: HTML Introduction</a></li>
+      <li><a href="https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/CSS_basics" target="_blank">MDN Web Docs: CSS Basics</a></li>
+      <li><a href="https://javascript.info/" target="_blank">JavaScript.info — Modern JS Tutorial</a></li>
+      <li><a href="https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/" target="_blank">freeCodeCamp: JavaScript Algorithms</a></li>
+    </ul>
+
+  </div>
+
+  <a href="portfolio.html">← Back to Portfolio</a>
+
+  <script>
+    function showSubjects() {
+      var subjects = document.getElementById("subjects");
+      if (subjects.style.display === "none") {
+        subjects.style.display = "block";
+      } else {
+        subjects.style.display = "none";
+      }
+    }
+
+    function motivate() {
+      alert("Keep going Asiya! You’re a future EdTech star in the making ✨💪.");
+    }
+
+    function toggleDarkMode() {
+      document.body.classList.toggle("dark-mode");
+    }
+  </script>
+
+</body>
+</html>
